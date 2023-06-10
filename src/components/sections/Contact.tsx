@@ -32,7 +32,7 @@ export function Contact() {
   };
 
   return (
-    <section className="flex items-center px-6 py-16 md:py-32">
+    <section id="contact" className="flex items-center px-6 py-16 md:py-32">
       <div className="w-full max-w-sm mx-auto">
         <SectionTitle title="Entre em contato" subtitle="contato" />
 

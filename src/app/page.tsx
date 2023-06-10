@@ -1,7 +1,7 @@
-import { ExperienceSection } from "@/components/sections/Experience";
-import { HeroSection } from "@/components/sections/Hero";
-import { HighlightedSection } from "@/components/sections/Highlighted";
-import { TechSection } from "@/components/sections/Technology";
+import { ExperienceSection } from "@/components/sections/home/Experience";
+import { HeroSection } from "@/components/sections/home/Hero";
+import { HighlightedSection } from "@/components/sections/home/Highlighted";
+import { TechSection } from "@/components/sections/home/Technology";
 
 export const metadata = {
   title: "My Portfolio | Home",

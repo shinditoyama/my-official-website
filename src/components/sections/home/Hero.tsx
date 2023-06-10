@@ -1,4 +1,5 @@
-import { TechBadge } from "../TechBadge";
+"use client";
+import { TechBadge } from "@/components/TechBadge";
 
 const MOCK_CONTACTS = [
   { url: "/", icon: "icon" },
@@ -7,6 +8,13 @@ const MOCK_CONTACTS = [
 ];
 
 export function HeroSection() {
+  const handleContact = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="flex flex-col justify-center w-full py-32 lg:h-screen bg-gray-950">
       <div className="container flex items-center justify-between flex-col-reverse lg:flex-row ">
@@ -26,7 +34,10 @@ export function HeroSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-5 mt-6 lg:mt-10">
-            <button className="bg-emerald-600 py-3 px-4 rounded-lg hover:bg-emerald-500 transition-all">
+            <button
+              onClick={handleContact}
+              className="bg-emerald-600 py-3 px-4 rounded-lg hover:bg-emerald-500 transition-all"
+            >
               Entre em contato
             </button>
 

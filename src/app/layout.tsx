@@ -1,3 +1,4 @@
+import { BackToTop } from "@/components/BackToTop";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <BackToTop />
         <Footer />
       </body>
     </html>

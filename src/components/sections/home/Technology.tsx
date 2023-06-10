@@ -1,5 +1,5 @@
-import { SectionTitle } from "../SectionTitle";
-import { TechCard } from "../TechCard";
+import { SectionTitle } from "@/components/SectionTitle";
+import { TechCard } from "@/components/TechCard";
 
 export function TechSection() {
   return (

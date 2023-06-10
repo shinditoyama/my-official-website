@@ -1,6 +1,6 @@
+import { HighlightCard } from "@/components/HighlightCard";
+import { SectionTitle } from "@/components/SectionTitle";
 import Link from "next/link";
-import { ProjectCard } from "../ProjectCard";
-import { SectionTitle } from "../SectionTitle";
 
 export function HighlightedSection() {
   return (
@@ -9,14 +9,19 @@ export function HighlightedSection() {
       <div className="w-full my-8 border-b border-gray-800" />
 
       <div>
-        <ProjectCard />
+        <HighlightCard />
         <div className="w-full my-8 border-b border-gray-800" />
-        <ProjectCard />
+        <HighlightCard />
         <div className="w-full my-8 border-b border-gray-800" />
 
         <p className="flex items-center gap-2">
           <span className="text-gray-400">Se interessoou?</span>
-          <Link href="/">Ver todos</Link>
+          <Link
+            href="/project"
+            className="hover:text-emerald-500 transition-colors"
+          >
+            Ver todos
+          </Link>
         </p>
       </div>
     </section>
