@@ -2,6 +2,7 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
+import { Button } from "../Button";
 import { SectionTitle } from "../SectionTitle";
 
 interface IContact {
@@ -68,12 +69,7 @@ export function Contact() {
             <p className="text-red-600">{errors.message.message}</p>
           )}
 
-          <button
-            type="submit"
-            className="bg-emerald-600 py-3 px-4 rounded-lg hover:bg-emerald-500 transition-all"
-          >
-            Enviar mensagem
-          </button>
+          <Button type="submit">Enviar</Button>
         </form>
       </div>
     </section>

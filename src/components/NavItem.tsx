@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -14,11 +14,9 @@ export function NavItem({ label, href }: NavItemProps) {
   return (
     <Link
       href={href}
-      className={clsx(
-        "flex items-center gap-2 text-gray-500 font-medium font-mono",
-        {
-          "text-red-50": isActive,
-        }
+      className={cn(
+        "flex items-center gap-2 text-gray-400 font-medium font-mono",
+        isActive && "text-gray-50"
       )}
     >
       <span className="text-emerald-400">#</span>

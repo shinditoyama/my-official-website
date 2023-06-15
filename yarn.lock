@@ -46,6 +46,21 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.42.0.tgz#484a1d638de2911e6f5a30c12f49c7e4a3270fb6"
   integrity sha512-6SWlXpWU5AvId8Ac7zjzmIOqMOba/JWY8XZ4A7q7Gn1Vlfg/SFFIlrtHXt9nPn4op9ZPAkl91Jao+QQv3r/ukw==
 
+"@graphcms/rich-text-react-renderer@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@graphcms/rich-text-react-renderer/-/rich-text-react-renderer-0.6.1.tgz#eabbc24a914896c0235e2873994b283a95ae9df8"
+  integrity sha512-w0OtKf9Fzmf0vI5bzgR502AndRLEeRlmb8x6nxUweDhfNRVKTOiwSEQKetMPpodSZUnXO+PI8J7rqxQvJof2kA==
+  dependencies:
+    "@graphcms/rich-text-types" "^0.5.0"
+    escape-html "^1.0.3"
+
+"@graphcms/rich-text-types@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@graphcms/rich-text-types/-/rich-text-types-0.5.0.tgz#9a8707de62d7c9e63b8912e269cf7cb912d13495"
+  integrity sha512-3oKVp2V1f9zYn9dYpLvePeu/8w8nQhZyv3FWm7yUtY/AlVXRwU3HJtIXvvdwAkmTuNANNhcDkBOzfkZaKJNADw==
+  dependencies:
+    tslib "^2.0.0"
+
 "@hookform/resolvers@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-3.1.0.tgz#ff83ef4aa6078173201da131ceea4c3583b67034"
@@ -810,6 +825,11 @@ escalade@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
   integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
+
+escape-html@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
+  integrity sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==
 
 escape-string-regexp@^4.0.0:
   version "4.0.0"
@@ -1690,6 +1710,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lucide-react@^0.242.0:
+  version "0.242.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.242.0.tgz#6637739b35b53649c5197c30cf403587b4204908"
+  integrity sha512-aJ8E/rSTnZVZeK1yU7cjbNcVL+Dd7Mv6xwtQbfCBLRToWPkslJBD8X/sdhOchSDzTrSOR/FmErXHsjCJOaLqdA==
+
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
@@ -2385,6 +2410,11 @@ synckit@^0.8.5:
     "@pkgr/utils" "^2.3.1"
     tslib "^2.5.0"
 
+tailwind-merge@^1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.13.1.tgz#da6b27c3fa0c2068895cb5e15e9ca92d4cb61e05"
+  integrity sha512-tRtRN22TDokGi2TuYSvuHQuuW6BJ/zlUEG+iYpAQ9i66msc/0eU/+HPccbPnNNH0mCPp0Ob8thaC8Uy9CxHitQ==
+
 tailwindcss@3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.3.2.tgz#2f9e35d715fdf0bbf674d90147a0684d7054a2d3"
@@ -2480,7 +2510,7 @@ tslib@^1.8.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.4.0, tslib@^2.5.0:
+tslib@^2.0.0, tslib@^2.4.0, tslib@^2.5.0:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.5.3.tgz#24944ba2d990940e6e982c4bea147aba80209913"
   integrity sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==

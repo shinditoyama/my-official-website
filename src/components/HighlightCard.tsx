@@ -1,40 +1,43 @@
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { TechBadge } from "./TechBadge";
 
-export function HighlightCard() {
+interface Props {
+  project: IProject;
+}
+
+export function HighlightCard({ project }: Props) {
   return (
     <div className="flex flex-col lg:flex-row gap-6">
-      <div className="">
-        <img
+      <div className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full overflow-hidden rounded-lg">
+        <Image
           width={420}
           height={304}
-          alt="Thumbnail do projeto"
-          src="https://www.handtalk.me/br/wp-content/uploads/sites/8/2018/11/capa-blog-2.png"
-          className="w-full h-[200px] lg:w-[420px] lg:min-h-full object-cover rounded-lg"
+          alt={project.title}
+          src={project.thumbnail.url}
+          className="w-full h-full object-cover rounded-lg opacity-70 hover:opacity-100 hover:scale-110 duration-500 transition-all"
         />
       </div>
 
-      <div>
-        <h3 className="text-lg text-gray-50">Projeto Next.js com GraphQL</h3>
+      <div className="flex-1">
+        <h3 className="text-lg text-gray-50">{project.title}</h3>
+
         <p className="text-gray-400 text-justify my-6">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout.
+          {project.shortDescription}
         </p>
 
         <div className="flex flex-wrap gap-2 mb-8 lg:max-w-sm">
-          <TechBadge name="Next.js" />
-          <TechBadge name="GraphQL" />
-          <TechBadge name="TypeScript" />
-          <TechBadge name="TypeScript" />
-          <TechBadge name="TypeScript" />
-          <TechBadge name="TypeScript" />
+          {project.technologies.map((tech) => (
+            <TechBadge key={`${project.title}-${tech.name}`} name={tech.name} />
+          ))}
         </div>
 
         <Link
-          href="/"
+          href={`/project/${project.slug}`}
           className="flex items-center gap-2 text-sm hover:text-emerald-500 transition-colors"
         >
-          Ver Projeto
+          Ver Projeto <ChevronRight size={20} className="pt-0.5" />
         </Link>
       </div>
     </div>

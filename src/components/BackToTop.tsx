@@ -1,6 +1,7 @@
 "use client";
-
+import { ChevronsUp } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
+import { Button } from "./Button";
 
 export function BackToTop() {
   const [show, setShow] = useState<boolean>(false);
@@ -22,12 +23,9 @@ export function BackToTop() {
   return (
     <div className="fixed right-4 bottom-4 z-20">
       {show && (
-        <button
-          onClick={scrollToTop}
-          className="bg-emerald-600 py-3 px-4 rounded-lg hover:bg-emerald-500 transition-all"
-        >
-          Top
-        </button>
+        <Button onClick={scrollToTop} className="p-3 rounded-full">
+          <ChevronsUp />
+        </Button>
       )}
     </div>
   );

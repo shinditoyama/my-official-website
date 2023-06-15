@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { NavItem } from "./NavItem";
 
-const NAV_ITEMS = [
+const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Portfolio", href: "/project" },
 ];
@@ -16,7 +16,7 @@ export function Header() {
         </Link>
 
         <nav className="flex items-center gap-8">
-          {NAV_ITEMS.map((item) => (
+          {NAV_LINKS.map((item) => (
             <NavItem key={item.label} {...item} />
           ))}
         </nav>
