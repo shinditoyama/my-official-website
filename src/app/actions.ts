@@ -3,13 +3,21 @@
 import { fetchHygraph } from "@/lib/fetch";
 import { GET_HOME, GET_PROJECTS, GET_SOCIALS } from "@/lib/queries";
 
-export async function onSubmit(formData: FormData) {
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
+/*export async function onSubmit(formData: FormData) {
+  const result = formSchema.safeParse({
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message"),
+  });
 
-  console.log(name, email, message);
-}
+  if (result.success) {
+    return { data: result.data };
+  }
+
+  if (result.error) {
+    return { error: result.error.format() };
+  }
+}*/
 
 export async function fetchHome(): Promise<IHome> {
   return fetchHygraph(GET_HOME, 60);

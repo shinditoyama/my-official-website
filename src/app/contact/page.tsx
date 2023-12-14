@@ -1,4 +1,4 @@
-import { Form } from "@/components/Form";
+import { FormComponent } from "@/components/Form";
 import { MotionDiv } from "@/components/Motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 
@@ -41,12 +41,12 @@ export default function Contact() {
             </div>
           </MotionDiv>
           <MotionDiv
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Form />
+            <FormComponent />
           </MotionDiv>
         </div>
       </div>

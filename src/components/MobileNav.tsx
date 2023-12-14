@@ -1,14 +1,20 @@
 import { Menu } from "lucide-react";
-import { Nav } from "./Nav";
+import Link from "next/link";
 import { Button } from "./ui/button";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
+
+const links = [
+  { path: "/", name: "home" },
+  { path: "/project", name: "projetos" },
+  { path: "/contact", name: "contato" },
+];
 
 export function MobileNav() {
   return (
@@ -20,18 +26,19 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Are you sure absolutely sure?</SheetTitle>
-          <SheetDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </SheetDescription>
+          <SheetTitle className="text-center">Menu</SheetTitle>
         </SheetHeader>
-        <div>
+        <div className="my-8">
           <div className="flex flex-col items-center justify-between h-full gap-32">
-            <Nav
-              containerStyle="flex flex-col items-center gap-6"
-              linkStyle="text-2xl"
-            />
+            <div className="flex flex-col items-center gap-6">
+              {links.map((link) => (
+                <Link key={link.name} href={link.path}>
+                  <SheetClose asChild>
+                    <Button className="w-36 capitalize">{link.name}</Button>
+                  </SheetClose>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </SheetContent>
