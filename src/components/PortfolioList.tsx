@@ -23,9 +23,7 @@ export function PortfolioList({ projects }: Props) {
 
   return (
     <Tabs defaultValue={selected}>
-      <TabsList
-        className={`w-full h-full grid md:grid-cols-3 lg:max-w-[640px] mb-8 mx-auto md:border dark:border-none`}
-      >
+      <TabsList className="w-full h-full grid md:grid-cols-3 lg:max-w-[640px] mb-8 mx-auto md:border dark:border-none">
         {uniqueCategories.map((category, index) => (
           <TabsTrigger
             key={index}

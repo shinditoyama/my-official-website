@@ -1,4 +1,4 @@
-import { fetchPortfolio } from "@/app/actions";
+import { fetchProjects } from "@/app/actions";
 import { PortfolioList } from "@/components/PortfolioList";
 import { SectionTitle } from "@/components/SectionTitle";
 
@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 export default async function Portfolio() {
-  const { projects } = await fetchPortfolio();
+  const { projects } = await fetchProjects();
 
   return (
     <section className="py-8 text-center">

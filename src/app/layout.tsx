@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import { ReactNode } from "react";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>

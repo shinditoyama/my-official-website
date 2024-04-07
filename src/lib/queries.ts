@@ -19,12 +19,13 @@ export const GET_HOME = `
         name
         icon
       }
-      highlightProjects(first: 5) {
+      highlightProjects(first: 6) {
         slug
         title
         shortDescription
         githubLink
         projectLink
+        projectType
         thumbnail {
           url
         }
@@ -53,6 +54,24 @@ export const GET_PROJECTS = `
       shortDescription
       thumbnail {
         url
+      }
+      githubLink
+      projectLink
+      projectType
+    }
+  }
+`;
+
+export const GET_PROJECT = (slug: string) => `
+  query {
+    project(where: {slug: "${slug}"}) {
+      title
+      shortDescription
+      thumbnail {
+        url
+      }
+      technologies {
+        name
       }
       githubLink
       projectLink

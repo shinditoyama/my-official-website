@@ -22,7 +22,7 @@ export function HighlightList({ projects }: Props) {
       spaceBetween={30}
       modules={[Pagination]}
       pagination={{ clickable: true }}
-      className="h-[450px] text-center"
+      className="h-[430px] text-center"
     >
       {projects.map((project) => (
         <SwiperSlide key={project.slug}>

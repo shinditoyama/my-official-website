@@ -76,7 +76,7 @@ export function FormComponent() {
               <FormControl>
                 <Textarea
                   placeholder="Message"
-                  className="bg-muted"
+                  className="bg-muted resize-none"
                   {...field}
                 />
               </FormControl>

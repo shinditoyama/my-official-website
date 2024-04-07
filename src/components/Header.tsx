@@ -30,7 +30,7 @@ export function Header() {
         header
           ? "backdrop-blur-lg shadow-lg dark:bg-accent"
           : "dark:bg-transparent"
-      } sticky top-0 w-full h-20 flex items-center justify-center z-30`}
+      } sticky top-0 w-full h-20 flex items-center justify-center z-10`}
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
