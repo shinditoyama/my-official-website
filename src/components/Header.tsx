@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { MobileNav } from "./MobileNav";
@@ -10,27 +11,44 @@ import { Separator } from "./ui/separator";
 
 export function Header() {
   const [header, setHeader] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [scrollPos, setScrollPos] = useState(0);
 
-  const scrollYPos = useCallback(() => {
+  const handleScroll = useCallback(() => {
+    const currentScrollPos = window.scrollY;
+
+    if (currentScrollPos > scrollPos) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+
+    setScrollPos(currentScrollPos);
+
     window.scrollY > 50 ? setHeader(true) : setHeader(false);
-  }, []);
+  }, [scrollPos]);
 
   useEffect(() => {
-    window.addEventListener("scroll", scrollYPos);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", scrollYPos);
-  });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
     <MotionHeader
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
+      animate={!isVisible ? "hidden" : "visible"}
+      variants={{
+        visible: { top: "0px", y: 0 },
+        hidden: { top: "-100px" },
+      }}
       transition={{ duration: 0.5 }}
-      className={`${
+      className={cn(
+        "sticky top-0 w-full h-20 flex items-center justify-center z-10",
         header
           ? "backdrop-blur-lg shadow-lg dark:bg-accent"
           : "dark:bg-transparent"
-      } sticky top-0 w-full h-20 flex items-center justify-center z-10`}
+      )}
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
